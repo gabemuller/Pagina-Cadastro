@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #87b4c9 35%, #0d2327 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    width: 900px; 
+    height: 700px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 8px 25px 0px rgba(21, 29, 43, 1);
+    outline: 8px solid white;
+    animation: popIn 0.3s ease-out; /* Aplica a animação pop-in */
+}
+
+.image-section {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-section {
+    width: 55%;
+    padding: 30px;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    position: relative;
+    right: 145px;
+    font-family: "Nunito", serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: #285057;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; 
+    transition-duration: 0.2s;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 15px;
+    align-items: flex-start;
+    transition-duration: 0.2s;
+}
+
+.form-group-inline input:hover,
+.form-group input:hover {
+    background-color: #f7f7f7;
+    transition-duration: 0.2s;
+}
+
+.form-group-inline > div {
+    flex: 1; 
+}
+
+.setor {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.setor label {
+    display: inline-block;
+    padding: 10px 44px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0d2327;
+    background-color: #fafafa;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.setor input[type="checkbox"] {
+    display: none; 
+}
+
+
+.setor input[type="checkbox"]:checked + label {
+    background-color: #0d2327;
+    color: white;
+    border-color: #0d2327;
+    transform: scale(1.05); 
+}
+
+
+.setor label:hover {
+    background-color: #f3f3f3;
+    border-color: #a0a0a0;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #0d2327;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+    appearance: none; 
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer; 
+}
+
+#senha {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d2327;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b3c42;
+}
